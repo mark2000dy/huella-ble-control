@@ -1,0 +1,26 @@
+# HUELLA BLE PWA - robots.txt
+# Version: 2.0.1
+
+User-agent: *
+Allow: /
+
+# Archivos importantes
+Allow: /index.html
+Allow: /manifest.json
+Allow: /favicon.svg
+Allow: /favicon.ico
+
+# Directorios de recursos
+Allow: /css/
+Allow: /js/
+Allow: /icons/
+
+# Archivos de sistema que no deben indexarse
+Disallow: /web.config
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.log
+Disallow: /.env
+
+# Sitemap (si existe)
+# Sitemap: https://huella-ble-control.azurewebsites.net/sitemap.xml
