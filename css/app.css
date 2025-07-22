@@ -1,0 +1,321 @@
+/**
+ * HUELLA BLE PWA - Estilos principales
+ * Version: 2.0.1
+ */
+
+/* Variables globales */
+:root {
+  --huella-primary: #00008B;
+  --huella-primary-dark: #000066;
+  --huella-primary-light: #4444AA;
+  --huella-success: #28a745;
+  --huella-danger: #dc3545;
+  --huella-warning: #ffc107;
+  --huella-info: #17a2b8;
+  --transition-speed: 0.3s;
+}
+
+/* Reset y base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Header personalizado */
+.navbar {
+  background-color: var(--huella-primary) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.navbar-brand i {
+  margin-right: 0.5rem;
+}
+
+/* Status badges */
+.badge {
+  padding: 0.5em 0.75em;
+  font-weight: 500;
+}
+
+.badge i {
+  font-size: 0.75em;
+  margin-right: 0.25em;
+}
+
+/* Cards mejoradas */
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  transition: box-shadow var(--transition-speed);
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  color: var(--huella-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Botones personalizados */
+.btn {
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all var(--transition-speed);
+}
+
+.btn i {
+  margin-right: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--huella-primary);
+  border-color: var(--huella-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--huella-primary-dark);
+  border-color: var(--huella-primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Tabs personalizados */
+.nav-tabs {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+  color: #6c757d;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all var(--transition-speed);
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--huella-primary);
+  border-bottom: 2px solid var(--huella-primary-light);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--huella-primary);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--huella-primary);
+}
+
+/* Formularios mejorados */
+.form-label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  padding: 0.625rem 0.875rem;
+  transition: border-color var(--transition-speed);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--huella-primary-light);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 139, 0.15);
+}
+
+/* Chart container */
+.chart-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+/* Debug console */
+.debug-console {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.875rem;
+  padding: 1rem;
+  height: 400px;
+  overflow-y: auto;
+  border-radius: 0.375rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.debug-console .log-entry {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.debug-console .log-time {
+  color: #858585;
+  margin-right: 0.5rem;
+}
+
+.debug-console .log-level-info {
+  color: #3794ff;
+}
+
+.debug-console .log-level-warn {
+  color: #e2b714;
+}
+
+.debug-console .log-level-error {
+  color: #f14c4c;
+}
+
+.debug-console .log-level-success {
+  color: #89d185;
+}
+
+/* Valores actuales de datos */
+#currentX, #currentY, #currentZ {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Modal personalizado */
+.modal-content {
+  border: none;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  border-radius: 0.5rem;
+}
+
+.modal-header {
+  background-color: var(--huella-primary);
+  color: white;
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+#pinInput {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  font-weight: 600;
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scanning {
+  animation: pulse 2s infinite;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 0.375rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .nav-tabs .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .chart-container {
+    height: 300px;
+  }
+  
+  #currentX, #currentY, #currentZ {
+    font-size: 1.5rem;
+  }
+}
+
+/* Estados de conexión */
+#connectionStatus.bg-success {
+  background-color: var(--huella-success) !important;
+}
+
+#connectionStatus.bg-danger {
+  background-color: var(--huella-danger) !important;
+}
+
+/* Scrollbar personalizada para debug console */
+.debug-console::-webkit-scrollbar {
+  width: 8px;
+}
+
+.debug-console::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.debug-console::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.debug-console::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Loading spinner */
+.spinner-border {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15em;
+}
+
+/* Device info */
+#deviceInfo {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+/* Utility classes */
+.text-huella {
+  color: var(--huella-primary) !important;
+}
+
+.bg-huella {
+  background-color: var(--huella-primary) !important;
+}
+
+.border-huella {
+  border-color: var(--huella-primary) !important;
+}
