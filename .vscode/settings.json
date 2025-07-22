@@ -1,0 +1,44 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/YOUR_SUBSCRIPTION_ID/resourceGroups/rg-huella-ble/providers/Microsoft.Web/sites/huella-ble-control",
+    "appService.deploySubpath": ".",
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.projectLanguage": "JavaScript",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "node_modules": true
+    },
+    "liveServer.settings.port": 8080,
+    "liveServer.settings.https": {
+        "enable": true,
+        "cert": "./cert.pem",
+        "key": "./key.pem",
+        "passphrase": ""
+    },
+    "files.associations": {
+        "*.js": "javascript",
+        "*.json": "json",
+        "*.css": "css",
+        "*.html": "html"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#00008B",
+        "titleBar.activeBackground": "#00008B",
+        "titleBar.activeForeground": "#FFFFFF"
+    }
+}
