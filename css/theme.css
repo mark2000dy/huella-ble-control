@@ -1,0 +1,223 @@
+/**
+ * HUELLA BLE PWA - Sistema de temas día/noche
+ * Version: 2.0.1
+ */
+
+/* Tema Claro (Light) - Por defecto */
+body[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #adb5bd;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --code-bg: #f8f9fa;
+  
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Tema Oscuro (Dark) */
+body[data-theme="dark"] {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f3460;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b8b8b8;
+  --text-muted: #808080;
+  --border-color: #2d3748;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --card-bg: #1e293b;
+  --input-bg: #2d3748;
+  --code-bg: #1e1e1e;
+  
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Aplicar tema a componentes */
+body[data-theme="light"] .card,
+body[data-theme="dark"] .card {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+body[data-theme="light"] .form-control,
+body[data-theme="light"] .form-select,
+body[data-theme="dark"] .form-control,
+body[data-theme="dark"] .form-select {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+body[data-theme="dark"] .form-control:focus,
+body[data-theme="dark"] .form-select:focus {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+}
+
+body[data-theme="light"] .modal-content,
+body[data-theme="dark"] .modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+body[data-theme="dark"] .modal-header {
+  background-color: var(--huella-primary-dark);
+  border-bottom-color: var(--border-color);
+}
+
+body[data-theme="light"] .table,
+body[data-theme="dark"] .table {
+  color: var(--text-primary);
+}
+
+body[data-theme="dark"] .table {
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.075);
+}
+
+/* Navbar en tema oscuro */
+body[data-theme="dark"] .navbar {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Tabs en tema oscuro */
+body[data-theme="dark"] .nav-tabs {
+  border-bottom-color: var(--border-color);
+}
+
+body[data-theme="dark"] .nav-tabs .nav-link {
+  color: var(--text-secondary);
+}
+
+body[data-theme="dark"] .nav-tabs .nav-link:hover {
+  color: var(--huella-primary-light);
+  border-bottom-color: var(--huella-primary-light);
+}
+
+body[data-theme="dark"] .nav-tabs .nav-link.active {
+  color: var(--text-primary);
+  background-color: transparent;
+  border-bottom-color: var(--huella-primary);
+}
+
+/* Chart container en tema oscuro */
+body[data-theme="dark"] .chart-container {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+/* Labels en tema oscuro */
+body[data-theme="dark"] .form-label {
+  color: var(--text-primary);
+}
+
+/* Debug console ya tiene su propio tema oscuro */
+
+/* Badges en tema oscuro */
+body[data-theme="dark"] .badge.bg-secondary {
+  background-color: #4a5568 !important;
+}
+
+/* Botones en tema oscuro */
+body[data-theme="dark"] .btn-outline-light {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+body[data-theme="dark"] .btn-outline-light:hover {
+  background-color: var(--bg-tertiary);
+  border-color: var(--text-primary);
+}
+
+body[data-theme="dark"] .btn-secondary {
+  background-color: #4a5568;
+  border-color: #4a5568;
+}
+
+body[data-theme="dark"] .btn-secondary:hover {
+  background-color: #2d3748;
+  border-color: #2d3748;
+}
+
+/* Transiciones suaves al cambiar tema */
+body,
+.card,
+.form-control,
+.form-select,
+.modal-content,
+.navbar,
+.nav-tabs .nav-link,
+.btn {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Iconos del tema */
+body[data-theme="light"] #themeIcon::before {
+  content: "\F5A2"; /* moon-fill */
+}
+
+body[data-theme="dark"] #themeIcon::before {
+  content: "\F5A7"; /* sun-fill */
+}
+
+/* Ajustes específicos para elementos de Bootstrap en tema oscuro */
+body[data-theme="dark"] .dropdown-menu {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+body[data-theme="dark"] .dropdown-item {
+  color: var(--text-primary);
+}
+
+body[data-theme="dark"] .dropdown-item:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* Sombras ajustadas para tema oscuro */
+body[data-theme="dark"] .card {
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+body[data-theme="dark"] .card:hover {
+  box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+/* Estados especiales */
+body[data-theme="dark"] .text-muted {
+  color: var(--text-muted) !important;
+}
+
+body[data-theme="dark"] .text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+/* Ajustes para accesibilidad */
+@media (prefers-color-scheme: dark) {
+  body:not([data-theme]) {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --bg-tertiary: #0f3460;
+    --text-primary: #f0f0f0;
+    --text-secondary: #b8b8b8;
+    --text-muted: #808080;
+    --border-color: #2d3748;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --card-bg: #1e293b;
+    --input-bg: #2d3748;
+    --code-bg: #1e1e1e;
+    
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+}
