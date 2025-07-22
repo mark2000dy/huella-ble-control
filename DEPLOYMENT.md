@@ -24,7 +24,7 @@ Asegurarse de que tenga:
     "start": "node server.js"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   }
 }
 ```
@@ -34,7 +34,7 @@ Si necesitas personalizar el despliegue:
 ```ini
 [config]
 SCM_DO_BUILD_DURING_DEPLOYMENT=true
-WEBSITE_NODE_DEFAULT_VERSION=18-lts
+WEBSITE_NODE_DEFAULT_VERSION=20-lts
 ```
 
 #### 4. Configurar Azure Web App
@@ -43,7 +43,7 @@ WEBSITE_NODE_DEFAULT_VERSION=18-lts
 1. Ir a **Configuration** → **General settings**
 2. Establecer:
    - **Stack**: Node
-   - **Major version**: 18 LTS
+   - **Major version**: 20 LTS
    - **Startup Command**: `node server.js`
 
 ##### Usando Azure CLI:
@@ -52,7 +52,7 @@ WEBSITE_NODE_DEFAULT_VERSION=18-lts
 az webapp config set \
   --name huella-ble-control \
   --resource-group rg-huella-ble \
-  --linux-fx-version "NODE|18-lts"
+  --linux-fx-version "NODE|20-lts"
 
 # Configurar comando de inicio
 az webapp config set \
@@ -121,7 +121,7 @@ az webapp show \
 - [ ] `package.json` tiene script `start`
 - [ ] `server.js` usa `process.env.PORT || 8080`
 - [ ] `web.config` está configurado correctamente
-- [ ] Node.js 18 LTS está configurado en Azure
+- [ ] Node.js 20 LTS está configurado en Azure
 - [ ] Las dependencias se instalaron correctamente
 - [ ] El sitio responde en HTTPS
 
@@ -219,8 +219,8 @@ Si continúas teniendo problemas:
 1. **Revisar logs detallados**
 2. **Contactar soporte de Azure**
 3. **Abrir issue en GitHub**
-4. **Email**: support@symbiot.tech
+4. **Email**: support@symbiot.com.mx
 
 ---
 
-**Última actualización**: Enero 2025
+**Última actualización**: Julio 2025
