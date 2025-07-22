@@ -26,7 +26,7 @@ Compatible con **Firmware CTIM3 v2.3.016** - Huella Estructural - Symbiot Techno
 
 ### Requisitos del servidor
 - **HTTPS obligatorio** (excepto localhost)
-- **Node.js 18+** (para desarrollo/despliegue)
+- **Node.js 20+** (para desarrollo/despliegue)
 - **Azure Web Apps** o cualquier hosting con Node.js
 
 ### Hardware compatible
@@ -64,7 +64,7 @@ az group create --name rg-huella-ble --location eastus
 az appservice plan create --name plan-huella-ble --resource-group rg-huella-ble --sku B1 --is-linux
 
 # Crear Web App
-az webapp create --name huella-ble-control --resource-group rg-huella-ble --plan plan-huella-ble --runtime "NODE:18-lts"
+az webapp create --name huella-ble-control --resource-group rg-huella-ble --plan plan-huella-ble --runtime "NODE:20-lts"
 ```
 
 4. **Desplegar aplicación**
@@ -251,8 +251,8 @@ SYNC_UUID:    '12345678-1234-5678-1234-56789abcdef7'
 
 ### Requisitos de desarrollo
 
-- Node.js 18+
-- npm 9+
+- Node.js 20+
+- npm 10+
 - Git
 
 ### Comandos disponibles
