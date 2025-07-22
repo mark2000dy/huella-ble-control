@@ -1,0 +1,82 @@
+{
+  "name": "HUELLA BLE Control",
+  "short_name": "HUELLA BLE",
+  "description": "Control de dispositivos HUELLA via Bluetooth Low Energy",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#00008B",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "id": "huella-ble-pwa",
+  "icons": [
+    {
+      "src": "/icons/icon-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screen1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Pantalla principal"
+    },
+    {
+      "src": "/screenshots/screen2.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Gráficos en tiempo real"
+    }
+  ],
+  "categories": ["utilities", "productivity"],
+  "lang": "es",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Escanear Dispositivos",
+      "short_name": "Escanear",
+      "description": "Buscar dispositivos HUELLA cercanos",
+      "url": "/?action=scan",
+      "icons": [
+        {
+          "src": "/icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
